@@ -1,0 +1,102 @@
+.bienvenida-content {
+  
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  ion-content::part(background) {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container {
+    gap: 250px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .descripcion {
+    font-size: 1rem;
+    margin: 0 20px 2rem;
+    max-width: 300px;
+  }
+
+  .login-toggle-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-toggle {
+    width: 240px;
+    height: 52px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    background-color: #e9e9e9;
+  }
+
+  .login-active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    background-color: var(--ion-color-primary);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+  }
+
+  .login-inactive {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-weight: 500;
+  }
+
+  .botones {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    ion-button {
+      flex: 1;
+      border-radius: 20px;
+    }
+  }
+}

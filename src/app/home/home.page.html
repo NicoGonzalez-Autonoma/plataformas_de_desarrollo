@@ -1,0 +1,90 @@
+<!-- <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+
+  <body>
+    <ion-menu side="end" contentId="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>MENÚ</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-button (click)="logout()" color="danger" expand="full">
+          Cerrar sesión
+        </ion-button>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>FINDYOU</ion-title>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon name="person-circle-outline" style="font-size: 24px;"></ion-icon>
+            </ion-button>
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding"></ion-content>
+
+      <ion-card>
+        <ion-card-content>
+          ¡Encuentrate a ti mismo en el mapa de tu ciudad y gana puntos!
+        </ion-card-content>
+      </ion-card>
+
+      <ion-footer>
+        <ion-toolbar>
+          <ion-title> Options </ion-title>
+        </ion-toolbar>
+      </ion-footer>
+    </div>
+  </body> -->
+<!-- ✅ ion-menu debe ir fuera del ion-content -->
+
+
+<!-- Menu lateral al lado derecho -->
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <!-- Botón de cerrar sesión dentro del menú -->
+    <ion-button (click)="logout()" color="danger" expand="full">
+      Cerrar sesión
+    </ion-button>
+  </ion-content>
+</ion-menu>
+
+<!-- ✅ Este es tu contenido principal -->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>FINDYOU</ion-title>
+      <ion-buttons slot="end">
+        <!-- Botón para abrir el menú -->
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <div id="map" style="height: 80vh;"></div>
+
+    <ion-card>
+      <ion-card-content>
+        ¡Encuéntrate a ti mismo en el mapa de tu ciudad y gana puntos!
+      </ion-card-content>
+    </ion-card>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title>Options</ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-content>
+</div>

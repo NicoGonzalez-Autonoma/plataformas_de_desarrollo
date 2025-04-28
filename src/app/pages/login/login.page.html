@@ -1,0 +1,49 @@
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<link rel="icon" type="image/png" href="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js">
+
+<ion-content class="login-page" fullscreen keyboard-scroll="false">
+  <div class="progress-container">
+    <h2 *ngIf="isLoading"></h2>
+    <ion-progress-bar *ngIf="isLoading" type="indeterminate" color="secondary"></ion-progress-bar>
+  </div>
+  <ion-progress-bar type="indeterminate" *ngIf="isLoading"></ion-progress-bar>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="../../../assets/login.mp4" type="video/mp4">
+
+    </video>
+  </div>
+
+  <div class="context">
+    <h2>FINDYOU</h2>
+    <p>Inicia sesión y juega mientras exploras tu ciudad.</p>
+  </div>
+
+  <div class="login-container">
+    <div class="log">
+
+      <div class="login-toggle-container">
+        <div class="login-toggle">
+          <div class="login-active">Login</div>
+          <div class="login-inactive"></div>
+        </div>
+      </div>
+      <h2 class="log-txt">INICIAR SESIÓN</h2>
+      <ion-item>
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-input type="email" placeholder="example@gmail.com" [value]="email" name="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <!-- <ion-progress-bar type="indeterminate"></ion-progress-bar> -->
+      <ion-item>
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-input type="password" placeholder="Contraseña" [value]="password" name="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <br>
+      <ion-button class="login-button" fill="outline" (click)="login()">Iniciar sesión</ion-button>
+
+      <p class="register-link">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+    </div>
+  </div>
+</ion-content>
